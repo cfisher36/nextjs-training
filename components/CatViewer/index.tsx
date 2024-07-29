@@ -11,8 +11,7 @@ const CatViewer: React.FC = async () => {
             <div className="flex justify-center">
                 {picUrl && 
                 <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
-                {/* The aspect ratio is maintained by setting padding */}
-                <div className="relative pb-[75%]"> {/* Aspect ratio of 4:3 (height is 75% of width) */}
+                <div className="relative pb-[75%]">
                     <Image
                         src={picUrl}
                         alt="Cat Pic"
