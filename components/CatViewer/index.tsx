@@ -15,8 +15,7 @@ const CatViewer: React.FC = async () => {
                             <Image
                                 src={picUrl}
                                 alt="Cat Pic"
-                                layout="fill"
-                                objectFit="cover"
+                                fill={true}
                                 className="absolute inset-0 rounded-md"
                             />
                         </div>
