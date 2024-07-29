@@ -1,0 +1,31 @@
+.base-input {
+    height: 2rem;
+    width: 100%;
+    border-radius: 0.125rem;
+    border: none;
+    padding: 0.5rem;
+    padding-top: 0.375rem;
+    color: #1a202c;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    border-style: inset;
+    border-color: #cbd5e0;
+
+    ::placeholder {
+        color: #a0aec0;
+    }
+}
+
+.base-input:focus {
+    outline: none;
+    border-width: 2px;
+    border-style: inset;
+    border-color: #2b6cb0;
+}
+
+@media (min-width: 640px) {
+    .responsive-text {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+}
