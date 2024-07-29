@@ -1,18 +1,20 @@
 import React from 'react';
 
 const CatViewer: React.FC = async () => {
-    
+
     const picUrl = await getPic();
     const catFact = await getCatFact();
-    
+
     return (
-        <div className="grid grid-cols-3 gap-8 pt-4">
-            <div>
-                {picUrl && <img src={picUrl} alt="Cat Pic" />}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 pt-4">
+            <div className="flex justify-center">
+                {picUrl && <img src={picUrl} alt="Cat Pic" className="object-cover" />}
             </div>
-            <div>
-                <div><label htmlFor='fact' className="font-bold">Fun Cat Fact:</label></div>
-                <div>{catFact && <span id="fact">{catFact}</span>}</div>
+            <div className="flex flex-col justify-start">
+                <label htmlFor="fact" className="font-bold">Fun Cat Fact:</label>
+                <div className="mt-2">
+                    {catFact && <span id="fact">{catFact}</span>}
+                </div>
             </div>
         </div>
     )

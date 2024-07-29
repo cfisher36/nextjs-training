@@ -53,7 +53,7 @@ const ContactMeForm: React.FC = () => {
     }
 
     return (
-        <form onSubmit={form.handleSubmit(processForm)}>
+        <form onSubmit={form.handleSubmit(processForm)} className="w-full">
             <div className="font-bold">Contact Me</div>
             <div>
                 <label htmlFor="name" className="block">Name:</label>
