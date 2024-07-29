@@ -9,19 +9,19 @@ const CatViewer: React.FC = async () => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 pt-4">
             <div className="flex justify-center">
-                {picUrl && 
-                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
-                <div className="relative pb-[75%]">
-                    <Image
-                        src={picUrl}
-                        alt="Cat Pic"
-                        layout="fill"
-                        objectFit="cover"
-                        className="absolute inset-0 rounded-md"
-                    />
-                </div>
-            </div>
-                    }
+                {picUrl &&
+                    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                        <div className="relative pb-[75%]">
+                            <Image
+                                src={picUrl}
+                                alt="Cat Pic"
+                                layout="fill"
+                                objectFit="cover"
+                                className="absolute inset-0 rounded-md"
+                            />
+                        </div>
+                    </div>
+                }
             </div>
             <div className="flex flex-col justify-start">
                 <label htmlFor="fact" className="font-bold">Fun Cat Fact:</label>
