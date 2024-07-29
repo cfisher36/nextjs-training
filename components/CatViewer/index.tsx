@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const CatViewer: React.FC = async () => {
 
@@ -8,7 +9,20 @@ const CatViewer: React.FC = async () => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 pt-4">
             <div className="flex justify-center">
-                {picUrl && <img src={picUrl} alt="Cat Pic" className="object-cover" />}
+                {picUrl && 
+                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                {/* The aspect ratio is maintained by setting padding */}
+                <div className="relative pb-[75%]"> {/* Aspect ratio of 4:3 (height is 75% of width) */}
+                    <Image
+                        src={picUrl}
+                        alt="Cat Pic"
+                        layout="fill"
+                        objectFit="cover"
+                        className="absolute inset-0 rounded-md"
+                    />
+                </div>
+            </div>
+                    }
             </div>
             <div className="flex flex-col justify-start">
                 <label htmlFor="fact" className="font-bold">Fun Cat Fact:</label>
